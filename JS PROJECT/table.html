@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+    <link rel="stylesheet" href="project.css">
+    <body>
+    
+    <div class="topnav">
+    
+      <a href="file:///E:/JS%20PROJECT/Loginpage.html">Logout</a>
+    
+    </div>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <form>
+      <div class="input-row">
+        <label for="name">Name</label>
+        <input type="name" name="name" id="name" required/>
+      </div>
+      <div class="input-row">
+        <label for="Email">Email</label>
+        <input type="email" name="email" id="email" required/>
+        <div class="input-row">
+            <label for="text">Standard</label>
+            <input type="text" name="standard" id="standard" required/>
+      </div>
+      <div class="input-row">
+        <label for="English">English</label>
+       
+        <input type="number" name="english" id="engmark" required/>
+        <button type="button" onclick="English()">Click me</button>
+        <p id="englishmarks"></p>
+        
+        
+        <script>
+        function English() {
+          
+          let x = document.getElementById("engmark").value;
+          
+          let text;
+          if (isNaN(x) || x < 1 || x > 40) {
+            text = "Congrats!!! You have passed in English";
+          } else {
+            text = "Oops!!! You have failed in English";
+          }
+          document.getElementById("englishmarks").innerHTML = text;
+        }
+        </script>
+      </div>
+      <div class="input-row">
+          
+        <label for="Tamil">Tamil</label>
+        <input type="number" name="tamil" id="tamilmark" required/>
+        <button type="button" onclick="Tamil()">Click me</button>
+        
+        <p id="tamilmarks"></p>
+        
+        <script>
+        function Tamil() {
+          
+          let x = document.getElementById("tamilmark").value;
+          
+          let text;
+          if (isNaN(x) || x < 1 || x > 40) {
+            text = "Congrats!!! You have passed in Tamil";
+          } else {
+            text = "Oops!!! You have failed in Tamil";
+          }
+          document.getElementById("tamilmarks").innerHTML = text;
+        }
+        </script>
+      </div>
+      <div class="input row">
+        <label for="Maths">Maths</label>
+        <input type="number" name="maths" id="mathmark" required/>
+        <button type="button" onclick="Maths()">Click me</button>
+        
+        <p id="mathsmarks"></p>
+        
+        <script>
+        function Maths() {
+          
+          let x = document.getElementById("mathmark").value;
+          
+          let text;
+          if (isNaN(x) || x < 1 || x > 40) {
+            text = "Congrats!!! You have passed in Maths";
+          } else {
+            text = "Oops!!! You have failed in Maths";
+          }
+          document.getElementById("mathsmarks").innerHTML = text;
+        }
+        </script>
+      
+        
+      </div>
+      <div class="input-row">
+        <label for="Science">Science</label>
+        <input type="number" name="science" id="scimark" required/>
+        
+        <button type="button" onclick="Science()">Click me</button>
+        
+        <p id="sciencemarks"></p>
+        
+        <script>
+        function Science() {
+          
+          let x = document.getElementById("scimark").value;
+          
+          let text;
+          if (isNaN(x) || x < 1 || x > 40) {
+            text = "Congrats!!! You have passed in Science";
+          } else {
+            text = "Oops!!! You have failed in Science";
+          }
+          document.getElementById("sciencemarks").innerHTML = text;
+        }
+        </script>
+        <div class="input-row">
+            
+          <label for="Social">Social</label>
+          <input type="number" name="science" id="socmark" required/>
+        
+         
+      
+          
+      
+          <button type="button" onclick="Social()">Click me</button>
+          
+          <p id="socialmark"></p>
+          
+          <script>
+          function Social() {
+            
+            let x = document.getElementById("socmark").value;
+            
+            let text;
+            if (isNaN(x) || x < 1 || x > 40) {
+              text = "Congrats!!! You have passed in Social";
+            } else {
+              text = "Oops!!! You have failed in Social";
+            }
+            document.getElementById("socialmark").innerHTML = text;
+          }
+          </script>
+
+        </div>
+        <div class="input-row">
+            <input type="text" name="science" id="demo5" /><br><br>
+         
+      
+          
+      
+          <button type="button" onclick="answer()">Your total is</button>
+          
+          <p id="demo5"></p>
+          <script>
+          function answer(){
+            var a,b,c,d,e;
+            a=Number(document.getElementById("engmark").value);
+            b=Number(document.getElementById("tamilmark").value);
+            c=Number(document.getElementById("mathmark").value);
+            d=Number(document.getElementById("scimark").value);
+            e=Number(document.getElementById("socmark").value);
+      
+            x= a + b + c + d + e;
+            document.getElementById("demo5").value= x;
+            }
+            </script>
+        </div>
+      <div class="input-row">
+          
+        <input type="text" name="passfail" id="numbb" /><br><br>
+         
+      
+          
+      
+        <button type="button" onclick="myFunction6()">Pass/Fail</button>
+      
+      <p id="demo6"></p>
+      
+      <script>
+      function myFunction6() {
+        
+        let x = document.getElementById("numbb").value;
+        let text;
+        if (isNaN(x) || x < 1 || x > 200)  {
+          text = "Congrats!!! You have passed in all the subjects";
+        } else {
+          text = "Oops!!! You have failed in all the subjects";
+        }
+        document.getElementById("demo6").innerHTML = text;
+      }
+      
+      
+      </script>
+      </div>
+
+      </div>
+      <button>Submit</button><br>
+    
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Standard</th>
+          <th>English</th>
+          <th>Tamil</th>
+          <th>Maths</th>
+          <th>Science</th>
+          <th>Social</th>
+          <th>Total</th>
+      
+       
+          <th></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      const formEl = document.querySelector("form");
+      const tbodyEl = document.querySelector("tbody");
+      const tableEl = document.querySelector("table");
+      function onAddWebsite(e) {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const name = document.getElementById("name").value;
+        const standard = document.getElementById("standard").value;
+        const english = document.getElementById("engmark").value;
+        const tamil = document.getElementById("tamilmark").value;
+        const maths = document.getElementById("mathmark").value;
+        const science = document.getElementById("scimark").value;
+        const social = document.getElementById("socmark").value;
+        const total = document.getElementById("demo5").value;
+     
+    
+
+        
+        tbodyEl.innerHTML += `
+            <tr>
+                <td>${name}</td>
+                <td>${email}</td>
+                <td>${standard}</td>
+                <td>${english}</td>
+                <td>${tamil}</td>
+                <td>${maths}</td>
+                <td>${science}</td>
+                <td>${social}</td>
+                <td>${total}</td>
+                
+                <td><button class="deleteBtn">Delete</button></td>
+                
+
+            </tr>
+        `;
+      }
+      function onDeleteRow(e) {
+        if (!e.target.classList.contains("deleteBtn")) {
+          return;
+        }
+
+        const btn = e.target;
+        btn.closest("tr").remove();
+      }
+
+      formEl.addEventListener("submit", onAddWebsite);
+      tableEl.addEventListener("click", onDeleteRow);
+      
+    </script>
+    
+         
+          
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        #myInput {
+          background-image: url('/css/searchicon.png');
+          background-position: 10px 10px;
+          background-repeat: no-repeat;
+          width: 100%;
+          font-size: 16px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid #ddd;
+          margin-bottom: 12px;
+        }
+        
+        #myTable {
+          border-collapse: collapse;
+          width: 100%;
+          border: 1px solid #ddd;
+          font-size: 18px;
+        }
+        
+        #myTable th, #myTable td {
+          text-align: left;
+          padding: 12px;
+        }
+        
+        #myTable tr {
+          border-bottom: 1px solid #ddd;
+        }
+        
+        #myTable tr.header, #myTable tr:hover {
+          background-color: #f1f1f1;
+        }
+        </style>
+        </head>
+        <body>
+        
+        
+          
+          
+          
+          
+      
+      
+        
+      
+      
+      
+      </form>
+      
+      
+          </div>

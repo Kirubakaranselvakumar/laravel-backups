@@ -1,0 +1,6 @@
+{
+    "require": {
+        "livewire/livewire": "^3.5",
+        "jambasangsang/flash": "^1.0"
+    }
+}
